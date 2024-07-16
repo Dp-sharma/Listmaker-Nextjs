@@ -1,0 +1,121 @@
+.all_list_component{
+    border-radius: 10px 0px 40px 0px;
+    background-color: #FFE9FF;
+    height: 80vh;
+    width: 20vw;
+}
+.all_list_toggle{
+    height: 40px;
+    display: none;
+}
+.all_list_toggle:target{
+    /* transform: rotate(180deg); */
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation: rotate_angle 1s ease-in-out 1 forwards forwards;
+    
+}
+@keyframes rotate_toggle {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(180deg);
+    }
+}
+.Msg_tag{
+    color: rgb(255, 141, 255);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 70vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5vw;
+}
+@media only screen and  (max-width:800px) {
+    .all_list_toggle{
+        height: 40px;
+        position: absolute;
+        left: 5px;
+        display: block;
+
+        
+    }
+    .animation_All_list{
+   /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+   
+animation: all_list 0.2s ease-out 1 forwards;
+} 
+.animation_close{
+ 
+    animation: close_all_list 0.2s ease-in 1 forwards;
+}
+@keyframes close_all_list {
+    from{
+        width: 30vw;
+    }
+    to{
+        width: 10vw;
+    }
+}
+@keyframes all_list {
+        from{
+            width: 10vw;
+        }
+        to{
+            width: 30vw;
+        }
+    }
+.Msg_tag{
+    font-size: xx-large;
+}
+}
+
+@media only screen and  (max-width:500px) {
+    .all_list_toggle{
+        height: 40px;
+        position: absolute;
+        left: 5px;
+        display: block;
+
+        
+    }
+    .animation_All_list{
+   /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+   
+animation: all_list 0.2s ease-out 1 forwards;
+} 
+.animation_close{
+ 
+    animation: close_all_list 0.2s ease-in 1 forwards;
+}
+@keyframes close_all_list {
+    from{
+        width: 50vw;
+    }
+    to{
+        width: 10vw;
+    }
+}
+@keyframes all_list {
+        from{
+            width: 10vw;
+        }
+        to{
+            width: 50vw;
+        }
+    }
+.Msg_tag{
+    font-size: larger;
+}
+}
+
+.All_list_btn{
+    border: 2px solid black;
+    background-color: rgb(250, 188, 250);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: black;
+    margin: 2px 0px;
+    border-radius: 20px;
+
+}

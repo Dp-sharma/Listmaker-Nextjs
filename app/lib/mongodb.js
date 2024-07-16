@@ -1,0 +1,28 @@
+import mongoose from 'mongoose';
+
+// main().catch(err => console.log(err));
+
+const connectDB = async () => {
+
+    try {
+        // if (mongoose.connection.readyState === 0) {
+        //     await mongoose.connect(process.env.MONGO_URI);
+        //     console.log('Database Connected Successfully');
+
+        // }
+        if (mongoose.connections[0].readyState) {
+            // Use current db connection
+            console.log('database already connected');
+            return;
+        }
+        // Use new db connection
+        await mongoose.connect(process.env.MONGO_URI, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+        });
+        console.log('Database Connected');
+    } catch (error) {
+        console.log(error);
+    }
+}
+export default connectDB;

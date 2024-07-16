@@ -1,0 +1,28 @@
+.footer{
+    background-color: grey;
+    height: 8vh;
+    
+    bottom: 0px;
+    /* width: 100vw; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+}
+
+.my_pic{
+    height: 6vh;
+    /* margin: 20px; */
+}
+@media screen and (max-width:800px){
+    .footer{
+        font-size: medium;
+        height: 10vh;
+    }
+}
+@media screen and (max-width:400px){
+    .footer{
+        font-size: smaller;
+        height: 15vh;
+    }
+}

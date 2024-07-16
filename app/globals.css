@@ -1,33 +1,80 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+  --bg:#1e1524;
+  --pri: #BF69FE;
+  --lpri:#d59cfe;
+  --sec:#DEF0FF;
+  --ter:#FEFEDF;
+  --dsec:#40FCE7;
+  --dpri:#6812A8;
+  --dark:black;
+  --tcolor:white;
   }
+body{
+  background-color: black;
+  color: white;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.btn {
+  appearance: none;
+  background-color: var(--pri);
+  border: 1px solid rgba(27, 31, 35, .15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  margin: 20px 10px;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.btn:focus:not(:focus-visible):not(.focus-visible) {
+  box-shadow: none;
+  outline: none;
+}
+
+.btn:hover {
+  background-color: var(--dpri);
+}
+
+.btn:focus {
+  box-shadow: rgba(194, 72, 247, 0.4) 0 0 0 3px;
+  outline: none;
+}
+
+.btn:disabled {
+  background-color: #94d3a2;
+  border-color: rgba(27, 31, 35, .1);
+  color: rgba(255, 255, 255, .8);
+  cursor: default;
+}
+
+.btn:active {
+  background-color: var(--lpri);
+  box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+}
+.submit_btn{
+  background-color: green;
+  border-radius: 20px;
+  padding: 2px 8px;
+
+}
+.submit_btn:active{
+  transform: scale(0.95);
+  margin: 2px;
 }

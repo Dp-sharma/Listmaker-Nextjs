@@ -1,0 +1,41 @@
+.profile{
+    position: absolute;
+    top: 3vh;
+    right: 10vw;
+    z-index: 2;
+}
+
+.profile_data {
+    cursor: pointer;
+}
+
+.profile_data:active {
+    transform: scale(0.95);
+}
+
+.profile_item_box {
+    text-align: center;
+    background-color: black;
+    color: white;
+    height: auto;
+    width: auto;
+    position: absolute;
+    right: -10px;
+    top: 50px;
+    /* border: 2px solid red; */
+    border-radius: 20px;
+    height: 20vh;
+    width: auto;
+    display: flex; /* Use display: flex or display: block to ensure the box is visible */
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    
+}
+
+.profile_item {
+    
+    margin: 0;
+    padding: 0.5em;
+    text-wrap: nowrap;
+}

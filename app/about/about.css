@@ -1,0 +1,51 @@
+/* CSS for the about page */
+.about {
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    margin-top: 5vh;
+    height: auto; /* Adjust to content */
+    width: 80%; /* Use percentage for responsive width */
+    max-width: 70vh; /* Max width to ensure it doesn't exceed */
+    text-align: left;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.mypic {
+    height: auto; /* Adjust to maintain aspect ratio */
+    max-height: 30vh; /* Max height to ensure it doesn't exceed */
+    /* width: 80%; Use percentage for responsive width */
+    max-width: 30vh; /* Max width to ensure it doesn't exceed */
+    margin-top: 5vh;
+}
+.all_social{
+    margin: 5vh;
+    display: flex;
+    gap: 50px;
+}
+.social{
+    cursor: pointer;
+    height: 5vh;
+}
+@media (max-width: 768px) {
+    .content {
+        width: 90%; /* Adjust width for smaller screens */
+        margin-top: 3vh; /* Adjust top margin */
+    }
+
+    .mypic {
+        /* width: 70%; Adjust width for smaller screens */
+        max-width: none; /* Remove max-width */
+        height: auto; /* Adjust to maintain aspect ratio */
+    }
+}

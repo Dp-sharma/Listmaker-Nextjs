@@ -1,0 +1,31 @@
+.cont{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login_form{
+    background-color: rgba(192, 38, 192, 0.603);
+    border: 5px solid white;
+    margin-top: 15vh;
+    min-height: 50vh;
+    padding: 10vh 5vw;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.login_input_div {
+    display: flex;
+    flex-direction: column;
+}
+.login_input_div input:focus{
+    color: black;
+}
+.login_input_div input{
+    color: black;
+    margin: 5px 0px;
+}
+.error{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    font-size: larger;
+    color: red;
+}

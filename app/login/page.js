@@ -1,10 +1,9 @@
-import Home_list from '@/components/home_list'
 import React from 'react'
-
+import Login from '@/components/Login'
 const page = () => {
   return (
     <div>
-      <Home_list/>
+      <Login/>
     </div>
   )
 }

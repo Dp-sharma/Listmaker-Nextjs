@@ -1,0 +1,30 @@
+.cont{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.register_form{
+    background-color: rgba(192, 38, 192, 0.603);
+    border: 5px solid white;
+    margin-top: 15vh;
+    min-height: 50vh;
+    padding: 10vh 5vw;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.register_input_div {
+    display: flex;
+    flex-direction: column;
+}
+.register_input_div input:focus{
+    color: black;
+}
+.register_input_div input{
+    color: black;
+}
+.error{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    font-size: larger;
+    color: red;
+}
