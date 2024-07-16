@@ -39,7 +39,7 @@ export async function POST(req){
     console.log(accessToken);
     
     const response = NextResponse.json({ msg: 'User has been logged in', accessToken });
-    response.headers.set('Set-Cookie', `jwtoken=${accessToken}; Path=/; HttpOnly; Max-Age=2340000`);
+    response.headers.set('Set-Cookie', `jwtoken=${accessToken}; Path=/; HttpOnly; Max-Age=2340000000000000000000`);
 
     return response;
   } catch (error) {

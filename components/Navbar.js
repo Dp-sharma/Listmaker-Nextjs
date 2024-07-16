@@ -27,7 +27,7 @@ const Navbar = () => {
             <div className={`cross ${isOpen ? 'cross_hide' : ''}`} onClick={toggleMenu}>
               <img src="close.png" alt="close" />
             </div>
-            <Link href="/"><li className="nav-item">home</li></Link>
+            <Link href="home"><li className="nav-item">home</li></Link>
             <Link href="mylist"><li className="nav-item">My List</li></Link>
             <Link href="about"><li className="nav-item">About us</li></Link>
 

@@ -1,21 +1,22 @@
 import { NextResponse } from "next/server";
-import { cookies } from "next/headers";
 import mongoose from "mongoose";
 import Blacklist from "@/app/models/blacklist"; // Adjust the import path as necessary
 
-export async function GET() {
+export async function GET(req) {
     try {
-        const cookieStore = cookies();
-        const token = cookieStore.get('jwtoken')?.value;
-        
+        const cookieHeader = req.headers.get('cookie');
+        const cookies = cookieHeader ? Object.fromEntries(cookieHeader.split('; ').map(c => c.split('='))) : {};
+        const token = cookies['jwtoken'];
+
         if (token) {
             // Save the token to the blacklist model
             await Blacklist.create({ token });
             
-            // Remove the token from the cookies
-            cookieStore.delete('jwtoken');
-            
-            return NextResponse.json({ msg: 'Success achieved' });
+            // Create a response and delete the cookie
+            const response = NextResponse.json({ msg: 'Success achieved' });
+            response.headers.set('Set-Cookie', `jwtoken=; Path=/; HttpOnly; Max-Age=0`);
+
+            return response;
         } else {
             return NextResponse.json({ msg: 'Token not found' }, { status: 400 });
         }
